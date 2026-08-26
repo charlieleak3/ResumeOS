@@ -1,0 +1,102 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}
+{\colortbl ;\red17\green34\blue68;\red51\green68\blue102;\red34\green34\blue34;\red255\green255\blue255;\red240\green240\blue240;}
+\paperw12240\paperh15840\margl1080\margr1080\margt1080\margb1080
+\viewkind4\uc1
+
+\f1\fs48\b\cf1 Software Requirements Document (SRD)\cf0\b0\f0\fs22\par
+\fs18\par
+\b Project Name:\b0  ResumeOS\par
+\b Document Version:\b0  1.1.0\par
+\b Target Architecture:\b0  Single Source of Truth (SSOT) Career Repository\par
+\b Licensing Strategy:\b0  $29 Starter / $79 Pro Lifetime License (Merchant of Record Managed)\par
+\par
+\line\par
+\fs22
+
+\f1\fs32\b\cf1 1. Executive Summary & Core Concept\cf0\b0\f0\fs22\par
+\par
+ResumeOS is a utility-first, local-first professional desktop and web application that operates as a Single Source of Truth (SSOT) Master Resume Repository. Job seekers and freelancers store, tag, version-control, and export tailored resumes while maintaining immutable application snapshots and profile-persistent custom UI themes.\par
+\par
+
+\f1\fs32\b\cf1 2. Functional Requirements\cf0\b0\f0\fs22\par
+\par
+\f1\fs26\b\cf2 M-01: Profile Isolation & Theme State\cf0\b0\f0\fs22\par
+\par
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat1\cell\b\cf4 REQ ID\cf0\b0\cell\b\cf4 Requirement Description\cf0\b0\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\cell\b REQ-M01-1\b0\cell System shall support 2-click switching between localized user profiles.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat5\cell\b REQ-M01-2\b0\cell System shall isolate master repositories into separate user database files.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\cell\b REQ-M01-3\b0\cell System shall support an optional 4-digit PIN lock per profile for security on shared hardware.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat5\cell\b REQ-M01-4\b0\cell System shall export/import complete profile backups via encrypted .resumeos files.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\cell\b REQ-M01-5\b0\cell System shall allow selection from popular color schemes (Default Slate, Navy, Teal, Midnight, etc.).\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat5\cell\b REQ-M01-6\b0\cell User color scheme selection shall persist per individual profile automatically.\cell\row
+\par
+
+\f1\fs26\b\cf2 M-02: Ingestion & Auto-Tagging\cf0\b0\f0\fs22\par
+\par
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat1\cell\b\cf4 REQ ID\cf0\b0\cell\b\cf4 Requirement Description\cf0\b0\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\cell\b REQ-M02-1\b0\cell System shall parse .docx, .pdf, and .odt files into structured blocks within 3 seconds.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat5\cell\b REQ-M02-2\b0\cell Onboarding parser shall not mandate manual tag entry to eliminate setup friction.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\cell\b REQ-M02-3\b0\cell Background NLP engine shall extract action verbs and present soft tag suggestions as UI pills.\cell\row
+\par
+
+\f1\fs26\b\cf2 M-03: Repository & Snapshots\cf0\b0\f0\fs22\par
+\par
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat1\cell\b\cf4 REQ ID\cf0\b0\cell\b\cf4 Requirement Description\cf0\b0\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\cell\b REQ-M03-1\b0\cell System shall maintain a Master Databank for roles, skills, metrics, and certifications.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat5\cell\b REQ-M03-2\b0\cell System shall feature a dedicated Freelance Hub for grouping client projects under umbrella headers.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\cell\b REQ-M03-3\b0\cell System shall freeze exported resumes into Immutable Point-in-Time Application Snapshots.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat5\cell\b REQ-M03-4\b0\cell System shall provide a one-click "Promote to Master" button for synchronized bullet point updates.\cell\row
+\par
+
+\f1\fs26\b\cf2 M-04: Canvas & Typography\cf0\b0\f0\fs22\par
+\par
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat1\cell\b\cf4 REQ ID\cf0\b0\cell\b\cf4 Requirement Description\cf0\b0\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\cell\b REQ-M04-1\b0\cell Editor shall provide a Hybrid Block Canvas with inline rich text formatting (Bold, Italic, Lists).\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat5\cell\b REQ-M04-2\b0\cell Editor shall constrain styling to prevent structural layout breaks and parser errors.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\cell\b REQ-M04-3\b0\cell System shall extract uploaded document fonts and save them as reusable typography presets.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat5\cell\b REQ-M04-4\b0\cell System shall offer curated font pairs (Corporate, Tech, Executive, Creative) with native fallbacks.\cell\row
+\par
+
+\f1\fs26\b\cf2 M-05: Audit & Delivery\cf0\b0\f0\fs22\par
+\par
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat1\cell\b\cf4 REQ ID\cf0\b0\cell\b\cf4 Requirement Description\cf0\b0\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\cell\b REQ-M05-1\b0\cell System shall feature a user-controlled ATS Inspector auditing headers, layout, and job description keywords.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\clcbpat5\cell\b REQ-M05-2\b0\cell System shall compile native output into four formats: .docx, .pdf, .odt, and .txt.\cell\row
+\trowd\trgaph108\cellx2160\cellx10080
+\cell\b REQ-M05-3\b0\cell System shall support four delivery channels: Download, Print, Email Client, and OS Share Sheet.\cell\row
+\par
+
+\f1\fs32\b\cf1 3. Pricing & Distribution Strategy\cf0\b0\f0\fs22\par
+\par
+\trowd\trgaph108\cellx2880\cellx5040\cellx10080
+\clcbpat2\cell\b\cf4 Tier\cf0\b0\cell\b\cf4 Price Point\cf0\b0\cell\b\cf4 Included Target Capabilities\cf0\b0\cell\row
+\trowd\trgaph108\cellx2880\cellx5040\cellx10080
+\cell\b Starter License\b0\cell $29 One-Time\cell 1 Master Profile, single snapshot, manual block canvas, .docx & .pdf export.\cell\row
+\trowd\trgaph108\cellx2880\cellx5040\cellx10080
+\clcbpat5\cell\b Pro Lifetime\b0\cell $79 One-Time\cell Freelance Hub, unlimited profiles + PIN lock, persistent themes, .odt export, ATS Audit.\cell\row
+\par
+}

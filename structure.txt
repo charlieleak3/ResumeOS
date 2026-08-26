@@ -1,0 +1,27 @@
+resumeos/
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+├── tailwind.config.js
+├── electron/
+│   ├── main.ts
+│   └── preload.ts
+├── src/
+│   ├── main/
+│   │   ├── db.ts               # Local SQLite / Isolated storage manager
+│   │   ├── parser.ts           # Document ingestion (.docx, .pdf, .odt parser)
+│   │   └── exporter.ts         # Multi-format compiler (DOCX, PDF, ODT, TXT)
+│   ├── renderer/
+│   │   ├── App.tsx             # Root workspace container
+│   │   ├── themeEngine.ts      # Profile-persistent theme token manager
+│   │   ├── components/
+│   │   │   ├── ProfileSwitcher.tsx
+│   │   │   ├── BlockCanvas.tsx
+│   │   │   ├── FreelanceHub.tsx
+│   │   │   └── ExportModal.tsx
+│   │   └── styles/
+│   │       └── globals.css     # CSS custom property tokens
+│   └── shared/
+│       └── types.ts            # Core TypeScript interfaces & schemas
+└── assets/
+    └── templates/              # Base document layouts
